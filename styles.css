@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    list-style: none;
+
     text-decoration: none;
 }
 header {
@@ -27,6 +27,7 @@ nav {
 nav ul {
     display: flex;
     align-items: center;
+    list-style: none;
 }
 nav li {
     margin-right: 2.5rem;
@@ -46,6 +47,8 @@ nav a {
 .menuicn, #check {
     display: none;
 }
+
+/*hace que mi menu nav sea responsive, por favor no tocar*/
 @media (max-width: 768px){
     .checkbtn {
         display: block;
@@ -78,7 +81,14 @@ nav a {
         display: flex;
         justify-content: center;
     }
+    .img-nav {
+        width: 95%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        grid-template-rows: 200px;
+    }
 }
+/*hace que el menu nav sea responsive, por favor no tocar*/
 @media (max-width: 280px) {
     header img {
         margin-left: 35px;
@@ -99,12 +109,34 @@ nav a {
 }
 
 .container {
-    margin-top: 3.5rem;
+    /*margin-top: 3.5rem;*/
     padding: 1.5rem;
     background-color: yellowgreen;
     text-align: center;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 h1,h2,p {
     margin: 22.5px;
+}
+
+.img-nav {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    grid-gap: 20px;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.img-nav .nav-box figure {
+    max-width: auto;
+    max-height: auto;
+}
+
+.img-nav .nav-box img {
+    width: auto;
+    height: auto;
+    object-fit: cover;
 }
