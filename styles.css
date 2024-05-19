@@ -1,9 +1,9 @@
 * {
     padding: 0;
     margin: 0;
-
     text-decoration: none;
 }
+/*HEADER DE LA PÁGINA, INCLUYENDO LOGO, NAV, Y SETEO DEL MENU HAMBURGUESA*/
 header {
     padding: .55rem 0;
     width: 100%;
@@ -11,11 +11,10 @@ header {
     position: sticky;
     top: 0px;
     justify-content: space-between;
-    background-color: aquamarine;
+    background-color: #4A4A4A;
     align-items: center;
     
 }
-
 header img {
     margin-left: 3.5rem;
     width: 12.5rem;
@@ -24,10 +23,6 @@ nav {
     font-size: 1.275rem;
     margin-right: 3.5rem;
     text-align: center;
-}
-#intro img{
-    width: 30%;
-    max-width: 55%;
 }
 nav ul {
     display: flex;
@@ -41,9 +36,16 @@ nav li:last-child {
     margin-right: 0;
 }
 nav a {
-    color: #000;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s ease;
+    color: #FFFFFF;
+    max-width: 100%;
 }
-
+nav a:hover{
+    border-bottom: 2px solid rgb(160, 70, 70);
+    transition: 0.3s ease;
+    max-width: 100%;
+}
 .menuicn {
     width: 30px;
     height: 30px;
@@ -56,18 +58,49 @@ nav a {
     left: 0;
 
 }
-
+/*Container y textos*/
 .container {
     /*margin-top: 3.5rem;*/
     padding: 1.5rem;
-    background-color: yellowgreen;
+    background-color: #E1C699;
     text-align: center;
     /*border: 1px solid black;*/
+}
+article {
+    padding: 1.5em 0;
 }
 h1,h2,p {
     margin: 22.5px;
 }
+/*#intro son las imágenes responsive del index. #series son las de anime*/
+#intro {
+    text-align: center; 
+    max-width: 100%;
+}
+#intro img {
+    width: 80%;
+    max-width: 80%;
+}
+#series img {
+    width: 60%;
+}
+/*CONTENEDORES "A Y B, DONDE UNO QUEDA A LA DERECHA Y OTRO A LA IZQUIERDA*/
+.c-i{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    height: 100%;
+    align-items: center;
+}
 
+.c-a, .c-b{
+    width: 45%;
+    text-align: justify;
+    max-width: 100%;
+    margin: auto;
+}
+/*MENU NAVEGACIÓN DEL FINAL DEL INDEX*/
 .img-nav {
     width: 100%;
     margin: auto;
@@ -77,14 +110,17 @@ h1,h2,p {
     /*max-width: 1200px;  no */
     padding: 2% 0%;
 }
-
-
 .img-nav .nav-box img {
     width: auto;
     height: auto;
     object-fit: cover;
 }
+.nav-box img:hover{
+    scale: 1.1;
+    transition: 0.4s ease;
+}
 
+/*MEDIA QUERIES*/
 /*hace que mi menu nav sea responsive, por favor no tocar*/
 @media (max-width: 768px){
     .checkbtn {
@@ -136,6 +172,15 @@ h1,h2,p {
     }
     #kazuki {
         width: 55%;
+    }
+    .c-i {
+        flex-direction: column; 
+    }
+    .c-a, .c-b {
+        width: 100%; 
+    }
+    article {
+        padding: .5em 0;
     }
 }
 
