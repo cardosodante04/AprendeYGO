@@ -72,9 +72,14 @@ article {
 h1,h2,p {
     margin: 22.5px;
 }
+/*Imágenes responsive y alineadas*/
+.responsive-img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
 /*#intro son las imágenes responsive del index. #series son las de anime*/
-#intro {
-    text-align: center; 
+#intro { 
     max-width: 100%;
 }
 #intro img {
@@ -99,6 +104,9 @@ h1,h2,p {
     text-align: justify;
     max-width: 100%;
     margin: auto;
+}
+.c-a img, .c-b img {
+    text-align: center !important;
 }
 /*MENU NAVEGACIÓN DEL FINAL DEL INDEX*/
 .img-nav {
