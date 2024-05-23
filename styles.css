@@ -67,12 +67,17 @@ nav a:hover{
     /*border: 1px solid black;*/
 }
 article {
-    padding: 1.5em 0;
+    padding: 2em 0;
 }
 h1,h2,p {
     margin: 22.5px;
 }
-/*Imágenes responsive y alineadas*/
+/*Parrafos justificados*/
+.justify-p p{
+    text-align: justify;
+}
+/*Imágenes alineadas, no hacemos una clase que les cambie el tamaño porque eso depende del contenido alrededor*/
+/*Menos práctico si, pero más cómodo para poder corregir cada una individualmente.*/
 .responsive-img {
     margin-left: auto;
     margin-right: auto;
@@ -83,11 +88,14 @@ h1,h2,p {
     max-width: 100%;
 }
 #intro img {
-    width: 80%;
+    width: 70%;
     max-width: 80%;
 }
 #series img {
     width: 60%;
+}
+#juegos img {
+    width: 75%;
 }
 /*CONTENEDORES "A Y B, DONDE UNO QUEDA A LA DERECHA Y OTRO A LA IZQUIERDA*/
 .c-i{
@@ -190,6 +198,10 @@ h1,h2,p {
     article {
         padding: .5em 0;
     }
+    #series img {
+        padding: 1em 0;
+        width: 55%;
+    }
 }
 
 @media (max-width: 460px) {
@@ -204,6 +216,7 @@ h1,h2,p {
         width: 75%;
     }
 }
+
 /*hace que el menu nav sea responsive, por favor no tocar*/
 @media (max-width: 280px) {
     header img {
@@ -217,5 +230,21 @@ h1,h2,p {
     }
     nav ul {
         top: 73px;
+    }
+}
+@media (min-width: 1024px) {
+    .img-nav .nav-box img {
+        width: 280px;
+    }
+}
+/*CREO QUE HAY UNA FORMA MÁS FACIL DE HACER ESTO, PERO ME PARECIÓ QUE LAS IMÁGENES QUEDABAN MAL EN PANTALLAS CHICAS, LO AJUSTÉ Y DESPUES QUEDABAN MUY GRANDES EN RESOLUCIONES GRANDES*/
+@media (min-width: 769px) {
+    #juegos img {
+        width: 100%;
+    }
+}
+@media (min-width: 1200px) {
+    #juegos img {
+        width: 75%;
     }
 }
