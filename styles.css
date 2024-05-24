@@ -42,7 +42,7 @@ nav a {
     max-width: 100%;
 }
 nav a:hover{
-    border-bottom: 2px solid rgb(160, 70, 70);
+    border-bottom: 2px solid #FFC107;
     transition: 0.3s ease;
     max-width: 100%;
 }
@@ -66,15 +66,26 @@ nav a:hover{
     text-align: center;
     /*border: 1px solid black;*/
 }
+.container p {
+    text-align: justify;
+}
 article {
     padding: 2em 0;
 }
 h1,h2,p {
     margin: 22.5px;
 }
-/*Parrafos justificados*/
-.justify-p p{
-    text-align: justify;
+h1,h2,h3 {
+    font-family: 'Righteous', cursive;
+}
+p, li {
+    font-family: 'Lato', sans-serif;
+}
+article a {
+    color: #b22222;
+}
+article a:hover {
+    text-decoration: underline;
 }
 /*Imágenes alineadas, no hacemos una clase que les cambie el tamaño porque eso depende del contenido alrededor*/
 /*Menos práctico si, pero más cómodo para poder corregir cada una individualmente.*/
@@ -97,6 +108,16 @@ h1,h2,p {
 #juegos img {
     width: 75%;
 }
+#cartas-intro img {
+    width: 85%;
+
+}
+#kazuki {
+    width: 60%;
+}
+#reglamento img {
+    width: 45%;
+}
 /*CONTENEDORES "A Y B, DONDE UNO QUEDA A LA DERECHA Y OTRO A LA IZQUIERDA*/
 .c-i{
     display: flex;
@@ -106,15 +127,15 @@ h1,h2,p {
     height: 100%;
     align-items: center;
 }
-
 .c-a, .c-b{
     width: 45%;
     text-align: justify;
     max-width: 100%;
     margin: auto;
 }
-.c-a img, .c-b img {
+.caption{
     text-align: center !important;
+    color: rgb(73, 73, 73);
 }
 /*MENU NAVEGACIÓN DEL FINAL DEL INDEX*/
 .img-nav {
@@ -123,7 +144,6 @@ h1,h2,p {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
-    /*max-width: 1200px;  no */
     padding: 2% 0%;
 }
 .img-nav .nav-box img {
@@ -135,9 +155,11 @@ h1,h2,p {
     scale: 1.1;
     transition: 0.4s ease;
 }
-
+hr {
+    border-color:#E1C699;
+}
 /*MEDIA QUERIES*/
-/*hace que mi menu nav sea responsive, por favor no tocar*/
+/*Media para celulares, hace que mi menu nav sea responsive, por favor no tocar*/
 @media (max-width: 768px){
     .checkbtn {
         display: block;
@@ -153,9 +175,9 @@ h1,h2,p {
     nav ul {
         display: block;
         position: fixed;
-        top: 87px;
+        top: 92px;
         left: -100%;
-        background: #16b3e2;
+        background: #7A7A7A;
         width: 100%;
         height: 100vh;
         right: 0;
@@ -176,8 +198,6 @@ h1,h2,p {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: auto auto;
         grid-gap: 5%;
-        /*max-width: 1200px;  no */
-        
     }
     .img-nav:last-child {
         margin-bottom: 15%;
@@ -185,8 +205,12 @@ h1,h2,p {
     #intro img{
         width: 55%;
         max-width: 55%;
+        padding-top: 1em;
     }
     #kazuki {
+        width: 55%;
+    }
+    #cartas-intro img {
         width: 55%;
     }
     .c-i {
@@ -215,6 +239,12 @@ h1,h2,p {
     #kazuki {
         width: 75%;
     }
+    #cartas-intro img {
+        width: 75%;
+    }
+    .img-nav .nav-box img {
+        width: 70%;
+    }
 }
 
 /*hace que el menu nav sea responsive, por favor no tocar*/
@@ -232,7 +262,7 @@ h1,h2,p {
         top: 73px;
     }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1500px) {
     .img-nav .nav-box img {
         width: 280px;
     }
