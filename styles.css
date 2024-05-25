@@ -72,12 +72,27 @@ nav a:hover{
 article {
     padding: 2em 0;
 }
-h1,h2,p {
+h1,h2,h3,h4,h5,h6,p {
     margin: 22.5px;
 }
-h1,h2,h3 {
+h1,h2,h3,h4,h5,h6 {
     font-family: 'Righteous', cursive;
 }
+/*
+h1{
+    font-size: 1.65em;
+}
+h2{
+    font-size: 1.35em;
+}
+h3{
+    font-size: 1.25em;
+}
+*/
+p{ 
+    font-size: 1.05em;
+}
+
 p, li {
     font-family: 'Lato', sans-serif;
 }
@@ -86,6 +101,22 @@ article a {
 }
 article a:hover {
     text-decoration: underline;
+}
+/*FOOTER*/
+footer p{
+    padding: 0;
+    margin: 0;
+    color: #FFFFFF;
+    font-size: .80em;
+}
+footer {
+    background-color: #383838;
+    padding: 1.5em 0;
+    text-align: center;
+}
+
+#reglamento h3{
+    margin-top: 2.5em;
 }
 /*Imágenes alineadas, no hacemos una clase que les cambie el tamaño porque eso depende del contenido alrededor*/
 /*Menos práctico si, pero más cómodo para poder corregir cada una individualmente.*/
@@ -110,13 +141,18 @@ article a:hover {
 }
 #cartas-intro img {
     width: 85%;
-
 }
 #kazuki {
     width: 60%;
 }
 #reglamento img {
     width: 45%;
+}
+#osiris {
+    width: 70%;
+}
+#blueeyes {
+    width: 40%;
 }
 /*CONTENEDORES "A Y B, DONDE UNO QUEDA A LA DERECHA Y OTRO A LA IZQUIERDA*/
 .c-i{
@@ -136,6 +172,9 @@ article a:hover {
 .caption{
     text-align: center !important;
     color: rgb(73, 73, 73);
+}
+.break {
+    margin: 3.5em 0;
 }
 /*MENU NAVEGACIÓN DEL FINAL DEL INDEX*/
 .img-nav {
@@ -175,7 +214,7 @@ hr {
     nav ul {
         display: block;
         position: fixed;
-        top: 92px;
+        top: 91px;
         left: -100%;
         background: #7A7A7A;
         width: 100%;
@@ -265,6 +304,12 @@ hr {
 @media (min-width: 1500px) {
     .img-nav .nav-box img {
         width: 280px;
+    }
+    #blueeyes {
+        width: 32%;
+    }
+    #cartas-intro img {
+        width: 65%;
     }
 }
 /*CREO QUE HAY UNA FORMA MÁS FACIL DE HACER ESTO, PERO ME PARECIÓ QUE LAS IMÁGENES QUEDABAN MAL EN PANTALLAS CHICAS, LO AJUSTÉ Y DESPUES QUEDABAN MUY GRANDES EN RESOLUCIONES GRANDES*/
